@@ -3,7 +3,6 @@ var users = [];
 var port = 8001;
 var uuid = require("./uuid");
 var express = require('./miniExpress');
-//var express = require('./Express');
 var app = express();
 var jsonSuccess = {
 		status: 0,
@@ -228,7 +227,6 @@ app.delete('/item',function(req,res,next){
 	}
 });
 
-//app.use(express.static(__dirname + '/www'));
 app.use('/',function(req,res,next){
 	if (req.path === '/')
 	{

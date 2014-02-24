@@ -3,14 +3,14 @@ var http = require('http');
 var mainServer = require('./main');
 var cookie;
 
-function testRegister(startMsg,fullName2,username2,password2,verifyPassword2,port,method,path,resMsg,successMsg,failedMsg,errorInReq)
+function testRegister(startMsg,fullName,username,password,verifyPassword,port,method,path,resMsg,successMsg,failedMsg,errorInReq)
 {
 	console.log(startMsg);
 	var json = {
-			fullName: fullName2,
-			username: username2,
-			password: password2,
-			verifyPassword: verifyPassword2
+			fullName: fullName,
+			username: username,
+			password: password,
+			verifyPassword: verifyPassword
 	};
 	var body = JSON.stringify(json);
 
