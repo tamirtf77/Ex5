@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span2">
+      <!--Sidebar content-->
+	<h1> Welcome to todos! </h1>
+	<br>
+	<lrh>Login</lrh> <br>
+	<lr>username:</lr> <input ng-model="loginUsername" class="loginRegisterInputs">
+	<lr>password:</lr> <input ng-model="loginPassword" class="loginRegisterInputs">
+	<button ng-click="makeLogin()" ng-disabled="beforeLogin" class="actButton">Sign in</button>
+
+    </div>
+    <div class="span10">
+      <!--Body content-->
+	<br><lrh>Register</lrh><br>
+	<lr>full-name:</lr> <input ng-model="registerFullname" class="loginRegisterInputs"><br>
+	<lr>username:</lr> <input ng-model="registerUsername" class="loginRegisterInputs"><br>
+	<lr>password:</lr> <input ng-model="registerPassword" class="loginRegisterInputs"><br>
+	<lr>verify password:</lr> <input ng-model="registerVerifyPassword" class="loginRegisterInputs"><br>
+        <button ng-click="makeRegister()" ng-disabled="beforeRegister" class="actButton">Register</button>
+
+    </div>
+  </div>
+</div>
