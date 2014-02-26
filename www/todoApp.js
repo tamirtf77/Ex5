@@ -2,6 +2,10 @@
  
 phonecatApp.controller('loginRegisterCtrl', function ($scope, $http, $location) {
   $scope.beforeLogin = false;
+  $scope.registerFullname = "";
+  $scope.registerUsername = "";
+  $scope.registerPassword = "";
+  $scope.registerVerifyPassword = "";
 
   $scope.makeLogin = function(){
 	var json = {
