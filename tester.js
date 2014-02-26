@@ -177,8 +177,8 @@ console.log();
 
 setTimeout(function(){
 	console.log();
-	testRegister('5.start try_username_is_already_exists','Israel Israeli','Israel','12345','12345',PORT,'POST','/register','The username is already exists',
-			'5.test try_username_is_already_exists SUCCEEDED','5.test try_username_is_already_exists failed',
+	testRegister('5.start try_registration_username_is_already_exists','Israel Israeli','Israel','12345','12345',PORT,'POST','/register','The username is already exists',
+			'5.test try_registration_username_is_already_exists SUCCEEDED','5.test try_registration_username_is_already_exists failed',
 			'in test 5 got error: ');
 	testLogin('6.start try_login_before_register','Israel2','12345',PORT,'POST','/login','You should register before try to login - username does not exist',
 			'6.test try_login_before_register SUCCEEDED','6.test try_login_before_register failed',

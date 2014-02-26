@@ -1,6 +1,6 @@
 var path = require('path');
 var users = [];
-var port = 8001;
+var MY_PORT = 8001;
 var uuid = require("./uuid");
 var express = require('./miniExpress');
 var app = express();
@@ -73,6 +73,10 @@ app.get('/item',express.cookieParser());
 app.get('/item',function(req,res,next){
 	var sent = false;
 	var date = new Date(Date.now());
+	var jsonFailed = {
+			status: 1,
+			msg: ""
+	};
 	for (var i = 0; (i < users.length) && (sent === false); i++)
 	{
 		if ( (users[i]['session'] === req.cookies.session) &&
@@ -234,4 +238,4 @@ app.use('/',function(req,res,next){
 	}
 	(express.static(__dirname + '/www'))(req,res,next);
 });
-app.listen(process.env.PORT || port);
+app.listen(process.env.PORT || MY_PORT);
